@@ -1,6 +1,19 @@
 # Movieshub-GPT
 - Create react app project
 - Install tailwind css and configure
+- Header
+- Routing
+- Login Form
+- Sign up form
+- Form Validation
+- useRef Hook
+- Firebase Setup
+- Deploying app to production
+- Create SignUp User Account
+- Implement Sign In user api
+- Created Redux Store with userSlice
+- Implemented Sign out feature
+- Update Profile
   
 
   # Features

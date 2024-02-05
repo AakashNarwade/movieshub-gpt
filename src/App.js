@@ -1,11 +1,7 @@
-import "./App.css";
+import Body from "./components/Body";
 
 function App() {
-  return (
-    <div className="text-3xl text-red-500 flex m-5 p-5 align-middle justify-center">
-      namaste everyone
-    </div>
-  );
+  return <Body />;
 }
 
 export default App;

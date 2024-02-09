@@ -7,14 +7,12 @@ import {
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
-  const navigate = useNavigate();
   const emailRef = useRef(null);
   const dispatch = useDispatch();
 
@@ -26,13 +24,10 @@ const Login = () => {
   };
 
   const handleClick = () => {
-    console.log(emailRef.current.value);
-    console.log(passwordRef.current.value);
     const emailValue = emailRef?.current?.value;
     const passwordValue = passwordRef?.current?.value;
 
     const message = checkValidData(emailValue, passwordValue);
-    console.log(message);
 
     setErrorMessage(message);
     if (message) return;
@@ -66,14 +61,12 @@ const Login = () => {
                     "https://media.istockphoto.com/id/1470831469/photo/mid-adult-man-working-from-home.jpg?s=612x612&w=0&k=20&c=7Jhr_B8Dm4y3yYfo_4gE9KwWdrK-wOIUUVCQZGDTpcM=",
                 })
               );
-              navigate("/browse");
             })
             .catch((error) => {
               // An error occurred
               // ...
               setErrorMessage(error.message);
             });
-          console.log(user);
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -91,16 +84,13 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          navigate("/browse");
 
-          console.log(user);
           // ...
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
           setErrorMessage(errorCode + "-" + errorMessage);
-          navigate("/");
         });
     }
 

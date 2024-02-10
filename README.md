@@ -33,6 +33,8 @@
 - TMDB Image CDN URL
 - Styled the Browse Page 
 - Added Custom Hooks for All Movie Lists
+- Add GPT Search
+- Added Multilingual functionality
   
 
   # Features

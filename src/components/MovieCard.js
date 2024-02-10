@@ -4,7 +4,7 @@ import { POSTER_URL } from "../utils/constants";
 const MovieCard = ({ title, poster }) => {
   //   console.log(poster);
   return (
-    <div className="w-48">
+    <div className="w-36">
       <div>
         <img src={POSTER_URL + poster} alt="movie-logo" />
       </div>

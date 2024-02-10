@@ -4,7 +4,7 @@ import { addTrailerVideo } from "../utils/moviesSlice";
 import { useDispatch } from "react-redux";
 
 const useMovieTrailer = (movieId) => {
-  console.log(movieId);
+  // console.log(movieId);
   const dispatch = useDispatch();
 
   const getMovieVideos = async () => {

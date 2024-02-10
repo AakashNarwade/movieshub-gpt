@@ -100,7 +100,7 @@ const Login = () => {
     // }
   };
   return (
-    <div className="">
+    <div>
       <Header />
 
       <div className="absolute">

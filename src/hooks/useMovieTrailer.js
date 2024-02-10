@@ -4,6 +4,7 @@ import { addTrailerVideo } from "../utils/moviesSlice";
 import { useDispatch } from "react-redux";
 
 const useMovieTrailer = (movieId) => {
+  console.log(movieId);
   const dispatch = useDispatch();
 
   const getMovieVideos = async () => {
@@ -17,7 +18,8 @@ const useMovieTrailer = (movieId) => {
     const filterData = data.results?.filter(
       (result) => result.type === "Trailer"
     );
-    const trailer = filterData.length ? filterData[0] : data?.results[0];
+    console.log(filterData, "filterData");
+    const trailer = filterData?.length ? filterData[0] : data?.results[0];
     dispatch(addTrailerVideo(trailer));
   };
   useEffect(() => {

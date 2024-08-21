@@ -1,4 +1,4 @@
-# Movieshub-GPT
+# MoviesHub-GPT
 - Create react app project
 - Install tailwind css and configure
 - Header
